@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jestel Limited | For Your Security & Safety Equipments</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "4KFNgp9Hj4IPYHJjz",
+      });
+   })();
+</script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#D4AF37',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+background-color: #FAF9F6;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('./img/landing.jpg');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-overlay {
+background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+}
+.showcase-item:hover .showcase-overlay {
+opacity: 1;
+}
+.testimonial-card {
+transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+}
+.partner-logo {
+filter: grayscale(100%);
+transition: all 0.3s ease;
+}
+.partner-logo:hover {
+filter: grayscale(0%);
+transform: scale(1.05);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #cb4030;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.hover-scale {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+.hover-rotate {
+  transition: transform 0.4s ease;
+}
+.hover-rotate:hover {
+  transform: rotate(8deg);
+}
+.custom-checkbox:hover input ~ .checkmark {
+border-color: #0078c8;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #0078c8;
+border-color: #0078c8;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.whatsapp-button {
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+transition: all 0.3s ease;
+}
+.whatsapp-button:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #cb4030;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #cb4030;
+}
+input:checked + .switch-slider:before {
+transform: translateX(24px);
+}
+
+@keyframes heroFadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-section {
+  animation: heroFadeZoom 5s ease-out forwards;
+}
+
+@keyframes parallaxShift {
+  0% {
+    background-position: center 0px;
+  }
+  100% {
+    background-position: center 40px;
+  }
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  animation: parallaxShift 10s ease-in-out infinite alternate;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.hero-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+}
+
+.hero-section {
+  background-image: url('./img/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  animation: heroFadeZoom 2s ease-out forwards;
+}
+.btn {
+  background-color: #cb4030;
+  border: none;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #a83225; /* darker red on hover */
+}
+
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="fixed w-full bg-transparent z-50 transition-all duration-300" id="navbar">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-12 h-11 flex items-center justify-center">
+<img src="./images/JESTELlogo.png" alt="">
+</div>
+<a href="index.html" class="text-3xl font-['Pacifico'] text-white">Jestel Limited</a>
+</div>
+<div class="hidden md:flex space-x-8">
+<a href="index.html" class="nav-link text-white hover:text-primary transition-colors active">Home</a>
+<a href="index2.html" class="nav-link text-white hover:text-primary transition-colors">About Us</a>
+<a href="#portfolio" class="nav-link text-white hover:text-primary transition-colors">Products</a>
+<a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+<a href="index2.html#privacy-policy" class="nav-link text-white hover:text-primary transition-colors">Privacy Policy</a>
+</div>
+<div class="md:hidden w-8 h-8 flex items-center justify-center text-white cursor-pointer">
+<i class="ri-menu-line ri-2x"></i>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-secondary z-50 transform translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
+<div class="flex justify-end p-6">
+<div class="w-8 h-8 flex items-center justify-center text-white cursor-pointer" id="close-menu">
+<i class="ri-close-line ri-2x"></i>
+</div>
+</div>
+<div class="flex flex-col items-center space-y-8 mt-16">
+<a href="index.html" class="text-white text-xl hover:text-primary transition-colors">Home</a>
+<a href="about.html" class="text-white text-xl hover:text-primary transition-colors">About Us</a>
+<a href="#portfolio" class="text-white text-xl hover:text-primary transition-colors">Portfolio</a>
+<a href="#resources" class="text-white text-xl hover:text-primary transition-colors">Resources</a>
+<a href="#contact" class="text-white text-xl hover:text-primary transition-colors">Contact</a>
+<a href="#privacy-policy" class="text-white text-xl hover:text-primary transition-colors">Privacy Policy</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section h-screen flex items-center">
+<div class="hero-overlay absolute inset-0 z-0"></div>
+<div class="container mx-auto px-6 z-10 relative">
+<div class="w-full md:w-2/3 lg:w-1/2">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">For Your Security & Safety Equipments</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl">Engineered for safety. Built on trust.
+Since 2000, Jestel Nig. Ltd. has provided comprehensive security systems, safety equipment, building materials, and construction services <br><br>Delivering reliable, world-class protection solutions across residential, commercial, and industrial sectors.</p>
+<a href="#portfolio" class="inline-block px-8 py-4 bg-primary text-white font-medium rounded-button hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap">Explore Our Products</a>
+</div>
+</div>
+</section>
+<!-- Design Showcase -->
+<section id="portfolio" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Products</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore our wide selection of high-quality security systems, safety equipment, industrial doors, access control solutions, surveillance systems, and construction materials — designed to safeguard every space.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Showcase Item 1 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/door1.jpg" alt="Automatic Door" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Automatic Door</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Residential</h3>
+<p class="text-gray-600">Luxury Residential</p>
+</div>
+</div>
+<!-- Showcase Item 2 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio2.jpg">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Commercial</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Vertex Headquarters</h3>
+<p class="text-gray-600">Corporate Office</p>
+</div>
+</div>
+<!-- Showcase Item 3 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio3.jpg" alt="Fine Dining Restaurant" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Hospitality</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Elysian Restaurant</h3>
+<p class="text-gray-600">Fine Dining</p>
+</div>
+</div>
+<!-- Showcase Item 4 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio4.jpg" alt="Luxury Bathroom" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Residential</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Serenity Spa Suite</h3>
+<p class="text-gray-600">Luxury Bathroom</p>
+</div>
+</div>
+<!-- Showcase Item 5 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio5.jpg" alt="Retail Boutique" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Commercial Item</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Item</h3>
+<p class="text-gray-600">Retail Space</p>
+</div>
+</div>
+<!-- Showcase Item 6 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio6.jpg" alt="Designer Kitchen" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Residential</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Another Item</h3>
+<p class="text-gray-600">Kitchen</p>
+</div>
+</div>
+<!-- Showcase Item 7 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio7.jpg" alt="Hotel Lobby" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Hospital</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Item</h3>
+<p class="text-gray-600">Luxury Lobby</p>
+</div>
+</div>
+<!-- Showcase Item 8 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio8.jpg" alt="Master Bedroom" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Residential</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Item</h3>
+<p class="text-gray-600"> Bedroom</p>
+</div>
+</div>
+<!-- Showcase Item 9 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./img/portfolio9.jpg" alt="Conference Room" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Commercial</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Item for Boardroom</h3>
+<p class="text-gray-600">Corporate Space</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Preview -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
+<p class="text-gray-600 mb-6 leading-relaxed">At Jestel Nig. Ltd., we understand that security is not just a product — it is a promise. A promise of safety, reliability, and peace of mind. Since our establishment in 2000, we have remained committed to delivering comprehensive security systems, advanced safety equipment, quality building materials, and professional construction services tailored to meet the evolving needs of our clients.</p>
+<p class="text-gray-600 mb-8 leading-relaxed">Built on a foundation of trust, technical expertise, and industry experience, our company has grown into a trusted partner for residential, commercial, and industrial sectors. We take pride in engineering protection solutions that are not only effective but durable, efficient, and compliant with global safety standards. Every project we undertake begins with a deep understanding of our clients unique requirements, risk environments, and long-term objectives.</p>
+<a href="index2.html" class="inline-block px-8 py-4 bg-primary text-white font-medium rounded-button hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap">Learn More</a>
+</div>
+<div class="w-full md:w-1/2">
+<div class="relative">
+<img src="./img/biz meeting2.jpg" alt="Design Process" class="w-full h-auto rounded-lg shadow-xl">
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-lg shadow-lg flex items-center justify-center">
+<p class="text-white text-center font-bold">20+ Years Experience</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say about their experience working with Jestel Nigeria Limited.</p>
+</div>
+<div class="relative">
+<div class="flex overflow-x-auto pb-8 -mx-4 px-4 space-x-6 scrollbar-hide">
+<!-- Testimonial 1 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+
+<div>
+<h4 class="font-bold">Victoria Okafor</h4>
+<p class="text-gray-600 text-sm">Abia, Umuahia</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Working with Jestel Limited transformed our house beyond our expectations. Their attention to our needs and ability to translate our lifestyle into the right elements for us resulted in a space that feels both luxurious and safe."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Shehu Oluwafemi</h4>
+<p class="text-gray-600 text-sm">Bauchi</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"As a CEO, I needed my office to reflect our company's values while providing a secured enviroment. Jestel Nig. Ltd delivered a sophisticate workspace that impresses clients and safeguards the company."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+
+<div>
+<h4 class="font-bold">Sophia Omorumi</h4>
+<p class="text-gray-600 text-sm">Delta State, Warri</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Jestel Limited replaced our restaurant doors and accessories with impeccable taste. They understood our culinary vision and gave us an ambiance that enhances the dining experience. Our customers frequently compliment the doors, which has significantly boosted our business."</p>
+</div>
+<!-- Testimonial 4 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Daniel Ihama</h4>
+<p class="text-gray-600 text-sm">Enugu</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"The team at Jestel Limited expertly balanced aesthetics with functionality in our tech startup office. They helped us with an enviroment fully fitted with top of the line security and attendance systems, CCTV surveillance and backup power supply systems."</p>
+</div>
+<!-- Testimonial 5 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Chibuike & Hassan Obi</h4>
+<p class="text-gray-600 text-sm">FCT, Abuja</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"After downsizing from our family home, we were concerned about maintaining safety in a smaller space. Jestel Limited provided locking systems, security doors, and furniture accessories that while aligning with our budget stil feels spacious and elegant. Their innovative storage solutions have enhanced our lifestyle."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-6">
+<h2 class="text-xl font-medium text-center text-gray-600 mb-12">Trusted By</h2>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Private Residences</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Corporate Offices</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Manufacturing Facilities</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Retail & Hospitality Businesses</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Construction Projects</i>
+</div>
+<!-- <div class="partner-logo w-32 h-16 flex items-center justify-center cursor-pointer">
+<i class="ri-facebook-fill ri-3x text-gray-400"></i>
+</div> -->
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Secure What Matters Most</h2>
+<p class="text-gray-600 mb-8 leading-relaxed">Ready to strengthen your safety and protection systems? Contact us today to schedule a consultation with our experts. We will assess your security needs, discuss your requirements, and design a comprehensive solution that safeguards your people, property, and investments with reliability and precision.</p>
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<p>Shop/suite 019, The Kings Plaza Opp, NAF Conference Centre & Suite , Banex-Kano Express Way, Abuja</p>
+</div>
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<p>+ (234) 702-500-7671, + (234) 818-450-3011</p>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<p>jestel@yahoo.com</p>
+</div>
+</div>
+<div>
+<p class="font-medium mb-4">Follow Us</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/jestel_construction_solutions?igsh=NTlqMmJ1dWI5c2oz" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/share/1NoVdMiua5/?mibextid=wwXIfr" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-line"></i>
+</a>
+</div>
+</div>
+</div>
+
+<div class="w-full md:w-1/2">
+<div class="bg-white rounded-lg shadow-lg p-8">
+<div class="space-y-4">
+
+<img src="./images/contact image.jpg" alt="" class="rounded-lg">
+
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-16">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<div class="flex items-center gap-2">
+
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="./images/JESTELlogo.png" alt="">
+</div>
+
+<!-- <div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-home-smile-fill ri-2x text-primary"></i>
+</div> -->
+<a href="index.html" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">Jestel Limited</a>
+</div>
+<p class="text-gray-300 mb-6">Delivering advanced security and safety solutions that turn everyday environments into fully protected, resilient spaces.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/jestel_construction_solutions?igsh=NTlqMmJ1dWI5c2oz" class="text-gray-300 hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/share/1NoVdMiua5/?mibextid=wwXIfr" class="text-gray-300 hover:text-white transition-colors">
+<i class="ri-facebook-line"></i>
+</a>
+
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+<li><a href="index2.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portfolio</a></li>
+<li><a href="#resources" class="text-gray-300 hover:text-white transition-colors">Resources</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-300 hover:text-white transition-colors">Residential Equipments</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Commercial Equipment</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Attendance Systems</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Backup Power Supply Systems</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Furniture Accessories</a></li>
+</ul>
+</div>
+
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2026 Jestel Limited. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="index2.html#privacy-policy" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+
+<a href="index2.html#privacy-policy" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/+234803334302" class="whatsapp-button fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white z-50">
+<i class="ri-whatsapp-line ri-2x"></i>
+</a>
+<!-- Cookie Consent -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-40 flex flex-col md:flex-row items-center justify-between" id="cookie-consent">
+<div class="mb-4 md:mb-0 md:mr-6">
+<p class="text-gray-700">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+</div>
+<div class="flex space-x-4">
+<button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap">Cookie Settings</button>
+<button class="px-4 py-2 bg-primary text-white rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap" id="accept-cookies">Accept All</button>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+navbar.classList.add('bg-secondary', 'shadow-md');
+navbar.classList.remove('bg-transparent');
+} else {
+navbar.classList.add('bg-transparent');
+navbar.classList.remove('bg-secondary', 'shadow-md');
+}
+});
+// Mobile menu toggle
+const menuButton = document.querySelector('.md\\:hidden');
+const closeButton = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+// Cookie consent
+const cookieConsent = document.getElementById('cookie-consent');
+const acceptCookies = document.getElementById('accept-cookies');
+if (localStorage.getItem('cookiesAccepted') !== 'true') {
+cookieConsent.classList.remove('hidden');
+} else {
+cookieConsent.style.display = 'none';
+}
+acceptCookies.addEventListener('click', function() {
+localStorage.setItem('cookiesAccepted', 'true');
+cookieConsent.style.display = 'none';
+});
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+// Close mobile menu if open
+mobileMenu.classList.add('translate-x-full');
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+// Custom checkbox functionality
+const checkboxes = document.querySelectorAll('.custom-checkbox');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('click', function() {
+this.checked = !this.checked;
+});
+});
+});
+
+// To send mail
+
+  function sendMail() {
+    // Get form values
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
+    const checkbox = document.querySelector("input[type='checkbox']");
+
+    // Validate checkbox
+    if (!checkbox.checked) {
+      alert("Please agree to the Privacy Policy before sending.");
+      return;
+    }
+
+    // Construct email components
+    const recipient = "yourname@example.com"; // 🔁 Replace with your email
+    const subject = encodeURIComponent("New Contact Form Submission");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+    );
+
+    // Create mailto link
+    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+    // Open email app
+    window.location.href = mailtoLink;
+  }
+
+
+
+</script>
+</body>
+</html>
