@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Jestel Limited</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#D4AF37',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+background-color: #FAF9F6;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=luxury%20modern%20interior%20design%20with%20minimalist%20aesthetic%2C%20penthouse%20living%20room%20with%20floor-to-ceiling%20windows%2C%20panoramic%20city%20view%2C%20neutral%20color%20palette%20with%20gold%20accents%2C%20high-end%20furniture%2C%20marble%20surfaces%2C%20soft%20lighting%2C%20ultra-high%20resolution%2C%20photorealistic%2C%20architectural%20photography&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-overlay {
+background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+}
+.showcase-item:hover .showcase-overlay {
+opacity: 1;
+}
+.testimonial-card {
+transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+}
+.partner-logo {
+filter: grayscale(100%);
+transition: all 0.3s ease;
+}
+.partner-logo:hover {
+filter: grayscale(0%);
+transform: scale(1.05);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #cb4030;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #7D7D7D;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #cb4030;
+border-color: #cb4030;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+top: 3px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.hover-scale {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+.hover-rotate {
+  transition: transform 0.4s ease;
+}
+.hover-rotate:hover {
+  transform: rotate(8deg);
+}
+.whatsapp-button {
+box-shadow: 0 4px 12px rgba(193, 54, 54, 0.15);
+transition: all 0.3s ease;
+}
+.whatsapp-button:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #cb4030;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #cb4030;
+}
+input:checked + .switch-slider:before {
+transform: translateX(24px);
+}
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="fixed w-full bg-transparent z-50 transition-all duration-300" id="navbar">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-12 h-11 flex items-center justify-center">
+<img src="./images/JESTELlogo.png" alt="">
+</div>
+<a href="index.html" class="text-3xl font-['Pacifico'] text-white">Jestel Limited</a>
+</div>
+<div class="hidden md:flex space-x-8">
+<a href="index.html" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+<a href="index2.html" class="nav-link text-white hover:text-primary transition-colors active">About Us</a>
+<a href="#portfolio" class="nav-link text-white hover:text-primary transition-colors">Products</a>
+<a href="#privacy-policy" class="nav-link text-white hover:text-primary transition-colors">Privacy Policy</a>
+<a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="md:hidden w-8 h-8 flex items-center justify-center text-white cursor-pointer">
+<i class="ri-menu-line ri-2x"></i>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-secondary z-50 transform translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
+<div class="flex justify-end p-6">
+<div class="w-8 h-8 flex items-center justify-center text-white cursor-pointer" id="close-menu">
+<i class="ri-close-line ri-2x"></i>
+</div>
+</div>
+<div class="flex flex-col items-center space-y-8 mt-16">
+<a href="index.html" class="text-white text-xl hover:text-primary transition-colors">Home</a>
+<a href="index2.html" class="text-white text-xl hover:text-primary transition-colors">About Us</a>
+<a href="#portfolio" class="text-white text-xl hover:text-primary transition-colors">Products</a>
+<a href="#privacy-policy" class="text-white text-xl hover:text-primary transition-colors">Privacy Policy</a>
+<a href="#contact" class="text-white text-xl hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section h-[70vh] flex items-center" style="background-image: url('./images/about_us.jpg')">
+<div class="hero-overlay absolute inset-0"></div>
+<div class="container mx-auto px-6 z-10">
+<div class="w-full md:w-2/3 lg:w-1/2">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Our Story & Vision</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl">Discover our comprehensive range of advanced security and safety solutions, engineered to deliver superior protection, reliability, and performance.</p>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-24">
+<div class="w-full lg:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
+<p class="text-gray-600 mb-6 leading-relaxed">Jestel Nig. Ltd. was incorporated in year 2000 with the Corporate Affairs Commission (CAC) under the company and Allied Matters Act of the Federal Republic of Nigeria for carrying out services such as sales, supply and instalation of high quality security and safety equipments from leading Manufacturing Companies across the continents.</p>
+<p class="text-gray-600 mb-6 leading-relaxed">Since its incorporation in 2000, Jestel Nig. Ltd. has grown into a respected provider of security, safety, and construction solutions, serving homes, businesses, and institutions with world-class products and professional installation services.</p>
+<p class="text-gray-600 leading-relaxed">Jestel deals in a wide range of security products in order to increase the safety and security of its clients in every way. We also sell and supply building materials and carry out construction works.</p>
+</div>
+<div class="w-full lg:w-1/2">
+<img src="./images/Our journey.png" alt="Our Story" class="w-80 h-auto rounded-lg shadow-xl">
+</div>
+</div>
+</div>
+</section>
+<!-- Values and Philosophy -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Values & Philosophy</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Our design philosophy is built on four core principles that guide every product we sell or project we undertake.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-heart-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Client-Centric Design</h3>
+<p class="text-gray-600">Every product provided is made with our clients' needs, preferences, and lifestyle in mind. Your story is at the heart of our process.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-leaf-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Sustainable Innovation</h3>
+<p class="text-gray-600">We believe in creating spaces that are not only beautiful but also environmentally responsible, using sustainable materials and practices.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-focus-3-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Attention to Detail</h3>
+<p class="text-gray-600">From the grandest architectural elements to the smallest decorative touches, our products ensure every detail contributes to the overall vision.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-team-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Collaborative Spirit</h3>
+<p class="text-gray-600">We foster strong partnerships with clients, architects, craftsmen, and artists to bring the finest expertise to each customer.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Design Showcase -->
+<section id="portfolio" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Products</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore our wide selection of high-quality security systems, safety equipment, industrial doors, access control solutions, surveillance systems, and construction materials — designed to safeguard every space.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Showcase Item 0.1 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/tv_console.jpg" alt="Tv Console" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Tv Console</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Interior</h3>
+<p class="text-gray-600">Tv Console</p>
+</div>
+</div>
+<!-- Showcase Item 1 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/solarcar_pot.JPG" alt="solarcar_pot" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Solar Car Port</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Port</h3>
+<p class="text-gray-600">Solar Car Port</p>
+</div>
+</div>
+<!-- Showcase Item 2 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/wardrobe.JPG" alt="wardrobe" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Wardrobe</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Interior</h3>
+<p class="text-gray-600">Wardrobe</p>
+</div>
+</div>
+<!-- Showcase Item 3 -->
+ <div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/stair_railings.webp" alt="Handrails" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Handrails</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Handrails</h3>
+<p class="text-gray-600">Luxury</p>
+</div>
+</div>
+<!-- Showcase Item 4 -->
+ <div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/floors.JPG" alt="Designer Flooring" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Designer Flooring</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Flooring</h3>
+<p class="text-gray-600">Designer Floors</p>
+</div>
+</div>
+<!-- Showcase Item 5 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/bar.JPG" alt="Bar" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Bar</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Commercial</h3>
+<p class="text-gray-600">Bar</p>
+</div>
+</div>
+<!-- Showcase Item 6 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-72">
+<img src="./images/smart_lock.jpg" alt="Smart Lock" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Smart Lock</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold"> Smart Lock</h3>
+<p class="text-gray-600">Security</p>
+</div>
+</div>
+<!-- Showcase Item 7 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-80">
+<img src="./images/kitchen_cabinet.JPG" alt="Kitchen Cabinet" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Kitchen Cabinet</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Kitchen</h3>
+<p class="text-gray-600">Kitchen Cabinet</p>
+</div>
+</div>
+<!-- Showcase Item 8 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-80">
+<img src="./images/door.jpg" alt="High-Tech Security Doors" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">High-Tech Security Doors</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">High-Tech Security Doors</h3>
+<p class="text-gray-600">Security Doors</p>
+</div>
+</div>
+<!-- Showcase Item 9 -->
+<div class="showcase-item group overflow-hidden rounded-lg shadow-lg">
+<div class="relative overflow-hidden h-80">
+<img src="./images/car pot.JPG" class="w-full h-full object-contain scale-125 transition-transform duration-700 group-hover:scale-150">
+<div class="showcase-overlay absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<span class="text-white text-sm font-medium px-4 py-2 border border-white/30 rounded-full">Car Pot</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl font-bold">Car Pot</h3>
+<p class="text-gray-600">Garage</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Policy Section -->
+<section id="privacy-policy" class="py-16 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Data Collection Practices</h3>
+<p class="text-gray-600 mb-4">At  Jestel Limited, we collect information that you provide directly to us, sign up for our newsletter, contact our customer service, or interact with our website. This information may include:</p>
+<ul class="list-disc pl-6 text-gray-600 space-y-2">
+<li>Contact information</li>
+<li>Communications with our customer service team</li>
+</ul>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Information Usage Policies</h3>
+<p class="text-gray-600 mb-4">We use the information we collect for various purposes, including:</p>
+<ul class="list-disc pl-6 text-gray-600 space-y-2">
+<li>Processing and fulfilling your orders</li>
+<li>Providing customer support</li>
+<li>Sending transactional emails and order updates</li>
+<li>Providing information about products, services, and promotions</li>
+<li>Improving our website, products, and services</li>
+<li>Analyzing usage patterns and trends</li>
+<li>Preventing fraudulent transactions and monitoring against errors</li>
+</ul>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Cookie Policy Overview</h3>
+<p class="text-gray-600 mb-4">Our website uses cookies and similar technologies to enhance your browsing experience, analyze website traffic, and personalize content.</p>
+<p class="text-gray-600 mt-4">You can manage your cookie preferences through your browser settings. However, disabling certain cookies may affect the functionality of our website.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">User Rights and Choices</h3>
+<p class="text-gray-600 mb-4">You have certain rights regarding your personal information:</p>
+<ul class="list-disc pl-6 text-gray-600 space-y-2">
+<li>Access and review your personal information</li>
+<li>Update or correct inaccuracies in your personal information</li>
+<li>Object to the processing of your personal information</li>
+<li>Opt-out of marketing communications</li>
+</ul>
+</div>
+
+<div class="flex justify-between items-center mt-12">
+
+<div class="text-gray-500 text-sm">
+Last Updated: February 14, 2026
+</div>
+</div>
+</div>
+<div class="mt-8 bg-gray-50 rounded-lg p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-4">Privacy Concerns?</h3>
+<p class="text-gray-600 mb-4">If you have any questions or concerns about our Privacy Policy or data practices, please contact our team</p>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4">
+<i class="ri-mail-line text-xl"></i>
+</div>
+<div>
+<p class="text-gray-600">Email: jestel@yahoo.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say about their experience working with Jestel Limited.</p>
+</div>
+<div class="relative">
+<div class="flex overflow-x-auto pb-8 -mx-4 px-4 space-x-6 scrollbar-hide">
+<!-- Testimonial 1 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+
+<div>
+<h4 class="font-bold">Victoria Okafor</h4>
+<p class="text-gray-600 text-sm">Abia, Umuahia</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Working with Horizon Interiors transformed our penthouse beyond our expectations. Their attention to detail and ability to translate our lifestyle into design elements resulted in a space that feels both luxurious and deeply personal."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Shehu Oluwafemi</h4>
+<p class="text-gray-600 text-sm">Bauchi</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"As a CEO, I needed my office to reflect our company's values while providing functionality. Horizon Interiors delivered a sophisticated space that impresses clients and inspires our team. Their process was efficient and the results exceptional."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Sophia Omorumi</h4>
+<p class="text-gray-600 text-sm">Delta State, Warri</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Horizon Interiors redesigned our restaurant with impeccable taste. They understood our culinary vision and created an ambiance that enhances the dining experience. Our customers frequently compliment the space, which has significantly boosted our business."</p>
+</div>
+<!-- Testimonial 4 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+<div>
+<h4 class="font-bold">Daniel Ihama</h4>
+<p class="text-gray-600 text-sm">Enugu</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"The team at Horizon Interiors expertly balanced aesthetics with functionality in our tech startup office. They created a space that fosters creativity and collaboration while maintaining a sophisticated edge that aligns with our brand identity."</p>
+</div>
+<!-- Testimonial 5 -->
+<div class="testimonial-card flex-shrink-0 w-full md:w-96 bg-white rounded-lg shadow-lg p-8">
+<div class="flex items-center mb-6">
+
+<div>
+<h4 class="font-bold">Chibuike & Hassan Obi</h4>
+<p class="text-gray-600 text-sm">FCT, Abuja</p>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"After downsizing from our family home, we were concerned about maintaining luxury in a smaller space. Horizon Interiors created a stunning apartment that feels spacious and elegant. Their innovative storage solutions and thoughtful design have enhanced our lifestyle."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-6">
+<h2 class="text-xl font-medium text-center text-gray-600 mb-12">Trusted By</h2>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Private Residences</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Corporate Offices</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Manufacturing Facilities</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Retail & Hospitality Businesses</i>
+</div>
+<div class="partner-logo w-34 h-18 flex items-center justify-center cursor-pointer">
+<i class=" ri-1x text-gray-400">Construction Projects</i>
+</div>
+<!-- <div class="partner-logo w-32 h-16 flex items-center justify-center cursor-pointer">
+<i class="ri-facebook-fill ri-3x text-gray-400"></i>
+</div> -->
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6 flex items-center justify-center">
+<div class="flex flex-col md:flex-row gap-12 ">
+
+
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Here's where you can find us</h2>
+<p class="text-gray-600 mb-8 leading-relaxed">Visit us at our office to discover how we protect spaces with world-class security and safety solutions. Conveniently located and designed for consultation, whether it is a full project collaboration or just a conversation about your needs, we look forward to welcoming you and helping you safeguard what matters most.</p>
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<p>Shop/suite 019, The Kings Plaza Opp, NAF Conference Centre & Suite , Banex-Kano Express Way, Abuja</p>
+</div>
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<p>+ (234) 702-500-7671, + (234) 818-450-3011</p>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<p>jestel@yahoo.com</p>
+</div>
+</div>
+<div>
+<p class="font-medium mb-4">Follow Us</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/jestel_construction_solutions?igsh=NTlqMmJ1dWI5c2oz" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors cursor-pointer">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/share/1NoVdMiua5/?mibextid=wwXIfr" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors cursor-pointer">
+<i class="ri-facebook-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-16">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<div class="flex items-center gap-2">
+
+<div class="w-12 h-12 flex items-center justify-center">
+<img src="./images/JESTELlogo.png" alt="">
+</div>
+
+<!-- <div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-home-smile-fill ri-2x text-primary"></i>
+</div> -->
+<a href="index.html" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">Jestel Limited</a>
+</div>
+<p class="text-gray-300 mb-6">Delivering advanced security and safety solutions that turn everyday environments into fully protected, resilient spaces.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/jestel_construction_solutions?igsh=NTlqMmJ1dWI5c2oz" class="text-gray-300 hover:text-white transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/share/1NoVdMiua5/?mibextid=wwXIfr" class="text-gray-300 hover:text-white transition-colors">
+<i class="ri-facebook-line"></i>
+</a>
+
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+<li><a href="index2.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portfolio</a></li>
+<li><a href="#resources" class="text-gray-300 hover:text-white transition-colors">Resources</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-300 hover:text-white transition-colors">Residential Equipments</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Commercial Equipment</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Attendance Systems</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Backup Power Supply Systems</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors">Furniture Accessories</a></li>
+</ul>
+</div>
+
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2026 Jestel Limited. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="index2.html#privacy-policy" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+
+<a href="index2.html#privacy-policy" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/+2348033334302" class="whatsapp-button fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white z-50 cursor-pointer">
+<i class="ri-whatsapp-line ri-2x"></i>
+</a>
+<!-- Cookie Consent -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-40 flex flex-col md:flex-row items-center justify-between" id="cookie-consent">
+<div class="mb-4 md:mb-0 md:mr-6">
+<p class="text-gray-700">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+</div>
+<div class="flex space-x-4">
+<button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-button hover:bg-gray-300 transition-colors whitespace-nowrap cursor-pointer">Cookie Settings</button>
+<button class="px-4 py-2 bg-primary text-white rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap cursor-pointer" id="accept-cookies">Accept All</button>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+navbar.classList.add('bg-secondary', 'shadow-md');
+navbar.classList.remove('bg-transparent');
+} else {
+navbar.classList.add('bg-transparent');
+navbar.classList.remove('bg-secondary', 'shadow-md');
+}
+});
+// Mobile menu toggle
+const menuButton = document.querySelector('.md\\:hidden');
+const closeButton = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+// Cookie consent
+const cookieConsent = document.getElementById('cookie-consent');
+const acceptCookies = document.getElementById('accept-cookies');
+if (localStorage.getItem('cookiesAccepted') !== 'true') {
+cookieConsent.classList.remove('hidden');
+} else {
+cookieConsent.style.display = 'none';
+}
+acceptCookies.addEventListener('click', function() {
+localStorage.setItem('cookiesAccepted', 'true');
+cookieConsent.style.display = 'none';
+});
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+// Close mobile menu if open
+mobileMenu.classList.add('translate-x-full');
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+// Custom checkbox functionality
+const checkboxes = document.querySelectorAll('.custom-checkbox');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('click', function() {
+this.checked = !this.checked;
+});
+});
+// Scroll Spy Active Link Highlight
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", function () {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120; // adjust for fixed navbar
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+});
+</script>
+</body>
+</html>
